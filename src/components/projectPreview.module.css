@@ -1,0 +1,27 @@
+.project_preview {
+    text-align: center;
+    padding: 1rem;
+    border: 1px #D58936 solid;
+    margin: 1rem 2rem;
+    box-shadow: 5px 5px 20px -5px rgba(105,20,14,0.5);
+}
+
+.project_preview > h2 {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.project_preview > h3 {
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+
+
+

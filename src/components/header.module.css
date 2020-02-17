@@ -1,0 +1,9 @@
+header {
+    padding: 1rem 0;
+    text-align: center; 
+}
+
+header a {
+    color: #3C1518;
+    border-bottom: none;
+}
