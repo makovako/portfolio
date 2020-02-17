@@ -10,7 +10,7 @@ export default ({ node }) => {
   return (
     <div className={styles.project_preview}>
       <h2>{node.frontmatter.title}</h2>
-      <h3>Language: {node.frontmatter.language}</h3>
+      <h3>Language: {node.frontmatter.language[0]}</h3>
       <div className={styles.links}>
         <Link to={node.fields.slug}> <FontAwesomeIcon icon={faBook}/> Read more</Link>
         <a href={node.frontmatter.githuburl}>View on Github <FontAwesomeIcon icon={faGithub}/></a>
