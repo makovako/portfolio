@@ -40,7 +40,7 @@ export default ({ data }) => {
         />
         <div className={styles.github_link}>
           <a href={post.frontmatter.githuburl}><FontAwesomeIcon icon={faGithub}/> View on Github</a>
-          {post.frontmatter.demo != null && <a href={post.frontmatter.demo}><FontAwesomeIcon icon={faDesktop}/> Demo</a>}
+          {post.frontmatter.demo != null && <a href={post.frontmatter.demo} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faDesktop}/> Demo</a>}
         </div>
       </div>
     </Container>
