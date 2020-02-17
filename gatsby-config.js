@@ -6,5 +6,18 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: "/portfolio"
+  pathPrefix: "/portfolio",
+  siteMetadata: {
+    title: 'My site'
+  },
+  plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/content`,
+        name: 'content'
+      }
+    },
+    'gatsby-transformer-remark'
+  ]
 }

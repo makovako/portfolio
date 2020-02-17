@@ -1,0 +1,15 @@
+section {
+    color: #3C1518;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+section > h2 {
+    padding: 0.5rem 0;
+    font-size: 1.7rem;
+}
+
+.project_list {
+    display: flex;
+    flex-direction: column;
+}
