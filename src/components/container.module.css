@@ -4,8 +4,9 @@
     max-width: 900px;
     display: flex;
     flex-direction: column;
-    background-color: #FDF1DB;
+    background-color: rgb(247, 229, 191);
     min-height: 100vh;
+    font-family: 'Noto Sans';
 }
 
 @media (max-width:500px) {

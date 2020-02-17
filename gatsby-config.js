@@ -18,6 +18,14 @@ module.exports = {
         name: 'content'
       }
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Noto Sans']
+        }
+      }
+    }
   ]
 }
