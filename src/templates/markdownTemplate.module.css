@@ -1,0 +1,39 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    color: #3C1518;
+
+}
+
+.portfolio h2 {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.technology, .language {
+    display: flex;
+}
+
+.technology > ul, .language > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.technology > ul > li,
+.language > ul > li{
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.content {
+    padding: 1rem 0;
+}
+
+.content img {
+    max-width: 100%;
+}
+
+.github_link {
+    margin-bottom: 1rem;
+}
