@@ -15,4 +15,4 @@ One of other features of my blog is, that it's multilingual. Also posts can be m
 
 Content is then separated to categories and tags, and there is also possibility to make a series of posts.
 
-![Blog-screenshot](/blog-screenshot.png)
+![Blog-screenshot](./blog-screenshot.png)
