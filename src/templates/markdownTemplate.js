@@ -2,6 +2,10 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Container from "../components/container"
 import styles from "./markdownTemplate.module.css"
+import { faGithub, faDeskpro } from "@fortawesome/free-brands-svg-icons";
+import { faDesktop } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -35,7 +39,8 @@ export default ({ data }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <div className={styles.github_link}>
-          <a href={post.frontmatter.githuburl}>View on Github</a>
+          <a href={post.frontmatter.githuburl}><FontAwesomeIcon icon={faGithub}/> View on Github</a>
+          {post.frontmatter.demo != null && <a href={post.frontmatter.demo}><FontAwesomeIcon icon={faDesktop}/> Demo</a>}
         </div>
       </div>
     </Container>
@@ -50,6 +55,7 @@ export const query = graphql`
         githuburl
         language
         technology
+        demo
       }
       html
     }

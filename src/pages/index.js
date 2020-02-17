@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 
 export default ({ data }) => (
   <Container>    
+      <Section name="My projects" type="my-projects"></Section>
       <Section name="School projects" type="school-projects"></Section>
       <Section name="Crash courses" type="crash-course"></Section>
   </Container>
