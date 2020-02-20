@@ -7,10 +7,25 @@
 module.exports = {
   /* Your site config here */
   pathPrefix: "/portfolio",
+  // assetPrefix: "/portfolio",
   siteMetadata: {
     title: 'My site'
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -18,7 +33,6 @@ module.exports = {
         name: 'content'
       }
     },
-    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
