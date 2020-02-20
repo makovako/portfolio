@@ -14,4 +14,4 @@ This is my landing page, from where I should be able to get to my other pages. F
 
 This site is build using vanilla HTML and CSS.
 
-![Landing-page-screenshot](landing-page-screenshot.png)
+![Landing-page-screenshot](./landing-page-screenshot.png)
