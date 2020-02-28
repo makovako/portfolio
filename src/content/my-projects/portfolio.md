@@ -3,6 +3,8 @@ title: My portfolio website
 githuburl: https://github.com/makovako/portfolio
 language:
     - JavaScript
+    - HTML
+    - CSS
 technology:
     - gatsby
     - react
