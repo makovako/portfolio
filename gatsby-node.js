@@ -14,9 +14,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ graphql, actions }) => {
-  //   console.log("here")
-
   const { createPage } = actions
+
+  /**
+   * Query for language pages
+   */
   const languageResult = await graphql(`
     query {
       allMarkdownRemark {
@@ -36,6 +38,34 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+
+  /**
+   * Query for technology pages
+   */
+  const technologyResult = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              language
+              githuburl
+              technology
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  /**
+   * Query for content pages
+   */
   const result = await graphql(`
     query {
       allMarkdownRemark {
@@ -49,7 +79,10 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  //   console.log(JSON.stringify(result, null, 4))
+
+  /**
+   * Creating content pages
+   */
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
@@ -60,6 +93,9 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  /**
+   * Getting array of unique languages
+   */
   const languagesSet = new Set()
   languageResult.data.allMarkdownRemark.edges.map(({ node }) =>
     node.frontmatter.language.forEach(lang => {
@@ -69,6 +105,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const languages = Array.from(languagesSet).sort()
   const languageTemplate = path.resolve("./src/templates/languageTemplate.js")
 
+  /**
+   * Creating page for each language
+   */
   languages.forEach(lang => {
     const nodes = languageResult.data.allMarkdownRemark.edges
       .filter(({ node }) => node.frontmatter.language.includes(lang) || false)
@@ -77,6 +116,35 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path,
       component: languageTemplate,
+      context: {
+        nodes,
+      },
+    })
+  })
+
+  /**
+   * Getting array of unique technologies
+   */
+  const technologySet = new Set()
+  technologyResult.data.allMarkdownRemark.edges.map(({ node }) =>
+    node.frontmatter.technology.forEach(tech => {
+      technologySet.add(tech)
+    })
+  )
+  const technologies = Array.from(technologySet).sort()
+  const technologyTemplate = path.resolve("./src/templates/technologyTemplate.js")
+
+  /**
+   * Creating page for each technology
+   */
+  technologies.forEach(tech => {
+    const nodes = technologyResult.data.allMarkdownRemark.edges
+      .filter(({ node }) => node.frontmatter.technology.includes(tech) || false)
+      .map(({ node }) => node)
+    const path = `/technology/${tech.toLowerCase()}`
+    createPage({
+      path,
+      component: technologyTemplate,
       context: {
         nodes,
       },
