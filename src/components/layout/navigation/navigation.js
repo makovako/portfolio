@@ -1,4 +1,5 @@
 import React from "react"
+// eslint-disable-next-line no-unused-vars
 import styles from "./navigation.module.css"
 import { Link } from "gatsby"
 import { faHome, faDesktop } from "@fortawesome/free-solid-svg-icons";
