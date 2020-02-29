@@ -1,6 +1,6 @@
 import React from "react"
-import Container from "../components/container"
-import Section from "../components/section"
+import Container from "../components/layout/container/container"
+import Section from "../components/main/section/section"
 import { graphql } from "gatsby"
 
 export default ({ data }) => (

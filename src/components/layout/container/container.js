@@ -1,8 +1,8 @@
 import React from "react"
 import styles from "./container.module.css"
-import Navigation from '../components/navigation'
-import Footer from '../components/footer'
-import Header from './header'
+import Navigation from '../navigation/navigation'
+import Footer from '../footer/footer'
+import Header from '../header/header'
 
 // fix for big font awesome icons
 import { config } from "@fortawesome/fontawesome-svg-core"

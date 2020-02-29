@@ -1,20 +1,19 @@
 import React from "react"
-import styles from "./section.module.css"
+import styles from "./demoList.module.css"
 import { useStaticQuery, graphql } from "gatsby"
-import ProjectPreview from './projectPreview'
+import DemoPreview from "../demoPreview/demoPreview"
 
-export default (props) => {
+export default props => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query DemoQuery {
       allMarkdownRemark {
         edges {
           node {
             id
             frontmatter {
-              type
               title
               githuburl
-              language
+              demo
             }
             fields {
               slug
@@ -25,16 +24,14 @@ export default (props) => {
     }
   `)
   return (
-    
     <section>
-      <h2>{props.name}</h2>
+      <h2>Demos</h2>
       <div className={styles.project_list}>
         {data.allMarkdownRemark.edges
-          .filter(({node}) => node.frontmatter.type === props.type)
-          .map(({node}) => (
-              <ProjectPreview node={node} key={node.id}></ProjectPreview>
-          ))
-        }
+          .filter(({ node }) => node.frontmatter.demo != null)
+          .map(({ node }) => (
+            <DemoPreview key={node.id} node={node} />
+          ))}
       </div>
     </section>
   )

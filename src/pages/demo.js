@@ -1,6 +1,6 @@
 import React from 'react'
-import Container from '../components/container'
-import DemoList from '../components/demoList'
+import Container from '../components/layout/container/container'
+import DemoList from '../components/demo/demoList/demoList'
 
 export default () => (
     <Container>

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql} from "gatsby"
-import Container from "../components/container"
+import Container from "../components/layout/container/container"
 import styles from "./markdownTemplate.module.css"
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDesktop } from "@fortawesome/free-solid-svg-icons"
