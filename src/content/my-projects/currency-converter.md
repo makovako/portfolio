@@ -6,7 +6,7 @@ language:
     - HTML
     - CSS
 technology:
-    - react
+    - React
 type: my-projects
 demo: https://makovako.xyz/currency-converter/
 ---

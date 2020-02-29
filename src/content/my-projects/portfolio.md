@@ -6,8 +6,8 @@ language:
     - HTML
     - CSS
 technology:
-    - gatsby
-    - react
+    - Gatsby
+    - React
 type: my-projects
 demo: https://makovako.xyz/portfolio/
 ---

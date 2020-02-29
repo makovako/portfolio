@@ -3,8 +3,10 @@ title: My blog
 githuburl: https://github.com/makovako/blog
 language:
     - JavaScript
+    - HTML
+    - CSS
 technology:
-    - hugo
+    - Hugo
 type: my-projects
 demo: https://makovako.xyz/blog/
 ---
