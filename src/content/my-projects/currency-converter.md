@@ -2,7 +2,7 @@
 title: Currency converter
 githuburl: https://github.com/makovako/currency-converter
 language:
-    - Javascript
+    - JavaScript
     - HTML
     - CSS
 technology:
