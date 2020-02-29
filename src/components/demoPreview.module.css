@@ -1,0 +1,9 @@
+.demoPreview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: end;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #3C1518;
+}
