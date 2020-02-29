@@ -6,7 +6,9 @@
     flex-direction: column;
     background-color: rgb(247, 229, 191);
     min-height: 100vh;
-    font-family: 'Noto Sans';
+    font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+    box-shadow: 10px 0px 20px 10px rgb(247, 229, 191),
+        -10px 0px 20px 10px rgb(247, 229, 191);
 }
 
 @media (max-width:500px) {
