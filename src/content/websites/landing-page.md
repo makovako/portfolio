@@ -6,7 +6,7 @@ language:
     - CSS
 technology:
     - CSS grid
-type: my-projects
+type: websites
 demo: https://makovako.xyz/
 ---
 

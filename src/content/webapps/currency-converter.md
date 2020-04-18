@@ -7,7 +7,7 @@ language:
     - CSS
 technology:
     - React
-type: my-projects
+type: webapps
 demo: https://makovako.xyz/currency-converter/
 ---
 

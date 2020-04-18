@@ -8,7 +8,7 @@ language:
 technology:
     - Gatsby
     - React
-type: my-projects
+type: websites
 demo: https://makovako.xyz/portfolio/
 ---
 

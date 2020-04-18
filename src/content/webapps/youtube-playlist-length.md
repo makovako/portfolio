@@ -10,7 +10,7 @@ technology:
     - NodeJS
     - Express
     - Youtube API
-type: my-projects
+type: webapps
 demo: http://ytl.makovako.xyz/
 ---
 
