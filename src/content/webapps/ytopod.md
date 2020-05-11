@@ -1,5 +1,5 @@
 ---
-title: Ytopod
+title: Ytopod (Youtube to podcast)
 githuburl: https://github.com/makovako/ytopod
 language:
     - Python
