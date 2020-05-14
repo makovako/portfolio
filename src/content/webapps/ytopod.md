@@ -4,7 +4,7 @@ githuburl: https://github.com/makovako/ytopod
 language:
     - Python
     - HTML
-    - Javascript
+    - JavaScript
 technology:
     - Flask
     - Flask Login
